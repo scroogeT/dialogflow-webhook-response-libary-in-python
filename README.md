@@ -14,9 +14,9 @@ To get started just import all the functions from the library using the followin
  ```
  In django, you can include the df_response_lib in your project app folder then you can import it like this:
  
- '''
+ ```
  from . import df_response_lib as df_response
- '''
+ ```
 
 ## Supported Responses
 
@@ -46,9 +46,9 @@ To get started just import all the functions from the library using the followin
 ## Actions on Google
 Start by initialising the actions on google class & store the reference object in a variable like:
 
-'''python
+```python
 aog = df_response.actions_on_google()
-'''
+```
 
 ### **Simple Response**
 ```python 
@@ -153,9 +153,9 @@ aog_list = aog.list_select("this is a list', list_elements)
 ## Facebook and Telegram
 Start by initialising the actions on google class & store the reference object in a variable like:
 
-'''python
+```python
 fb = df_response.facebook_response()
-'''
+```
 ### **Text response**
 ```python
 text_response(texts)
@@ -224,9 +224,9 @@ fb_card = fb.card_response(title, buttons)
 ## **Dialogflow Fulfillment Responses**
 Start by initialising the actions on google class & store the reference object in a variable like:
 
-'''python
+```python
 main_response = df_response.fulfillment_response()
-'''
+```
 ### **Fulfillment Text**
 ```python
 fulfillment_text(fulfillmentText)
