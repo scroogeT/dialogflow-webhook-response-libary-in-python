@@ -12,6 +12,11 @@ To get started just import all the functions from the library using the followin
  ```python
  from df_response_lib import *
  ```
+ In django, you can include the df_response_lib in your project app folder then you can import it like this:
+ 
+ '''
+ from . import df_response_lib as df_response
+ '''
 
 ## Supported Responses
 
@@ -39,6 +44,11 @@ To get started just import all the functions from the library using the followin
  - Output Contexts
 
 ## Actions on Google
+Start by initialising the actions on google class & store the reference object in a variable like:
+
+'''python
+aog = df_response.actions_on_google()
+'''
 
 ### **Simple Response**
 ```python 
@@ -141,7 +151,11 @@ list_elements = [
 aog_list = aog.list_select("this is a list', list_elements)
 ```
 ## Facebook and Telegram
+Start by initialising the actions on google class & store the reference object in a variable like:
 
+'''python
+fb = df_response.facebook_response()
+'''
 ### **Text response**
 ```python
 text_response(texts)
@@ -158,7 +172,7 @@ text_res = fb.text_response(texts)
 
 ### **Quick Replies**
 ```python
-quick_replies(title, quick_replies_list)
+fb.quick_replies(title, quick_replies_list)
 ```
 ***quick_replies_list*** - list of quick replies text
 ```python
@@ -208,6 +222,11 @@ fb_card = fb.card_response(title, buttons)
 ```
 
 ## **Dialogflow Fulfillment Responses**
+Start by initialising the actions on google class & store the reference object in a variable like:
+
+'''python
+main_response = df_response.fulfillment_response()
+'''
 ### **Fulfillment Text**
 ```python
 fulfillment_text(fulfillmentText)
@@ -274,3 +293,5 @@ Return this as your main fulfillment response.
 We are working to add more responses in the future. Please give your feedback and do contribute if you like.
 
 > Developed by [Pragnakalp Solutions - Artificial Intelligence, Machine Learning, Deep Learning, Chatbots Development](https://www.pragnakalp.com/)
+> Improvements by Databank Africa in conjunction with Agrarian Africa, Knowledge Transfer Africa and Agricultural Marketing Authority
+(https://databankafrica.com , https://agrarianafrica.com, )
